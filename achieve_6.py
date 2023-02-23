@@ -6,12 +6,14 @@
 #
 #This program will output the user generated number list as either prime or non prime numbers seperately. 
 numbers = (input("Enter your numbers")).split(",")
+NP = ""
+PN = ""
 for x in (numbers):
     x = int(x)
     flag = False
     if x == 1:
         print("The number {} is not a prime number".format(x))
-        
+        NP += str(x)
     elif x > 1 :
         for i in range(2, x) :
             if (x % i) == 0:
@@ -19,7 +21,11 @@ for x in (numbers):
                 break
         if flag:
             print("The number {} is not a prime number".format(x))
-            
+            NP += str(x)
         else:
             print("The number {} is a prime number".format(x))
-            
+            PN += str(x)
+NPsep = [int(i) for i in str(NP)]
+print(NPsep)
+PNsep = [int(i) for i in str(PN)]
+print(PNsep)
