@@ -26,6 +26,6 @@ for x in (numbers):
             print("The number {} is a prime number".format(x))
             PN += str(x)
 NPsep = [int(i) for i in str(NP)]
-print(NPsep)
+print("The following numbers are non prime numbers: ", NPsep)
 PNsep = [int(i) for i in str(PN)]
-print(PNsep)
+print("The following numbers are prime numbers: ", PNsep)
